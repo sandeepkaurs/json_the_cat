@@ -1,6 +1,6 @@
 const request = require('request');
 
-const userInput = process.argv[2];
+// const userInput = process.argv[2];
 const fetchBreedDescription = function(breedName, callback) {
   // console.log(breedName)
   const url = `https://api.thecatapi.com/v1/breeds/search?q=${breedName}`;
@@ -24,11 +24,11 @@ const fetchBreedDescription = function(breedName, callback) {
   });
 };
 
-fetchBreedDescription(userInput, (error, response) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log(response);
-  }
-});
-
+// fetchBreedDescription(userInput, (error, response) => {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log(response);
+//   }
+// }); all of this in index.js
+module.exports = { fetchBreedDescription };
